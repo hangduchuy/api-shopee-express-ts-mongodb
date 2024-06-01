@@ -6,8 +6,8 @@ import mongoose from 'mongoose'
 import chalk from 'chalk'
 
 //require database URL from properties file
-// const dbURL = `mongodb+srv://${process.env.USERNAME_DB}:${process.env.PASSWORD_DB}@ecommerce.f2agf.mongodb.net/main?retryWrites=true&w=majority`
-const dbURL = `mongodb+srv://admin:admin@cluster0.mrxtjwf.mongodb.net/shopee?retryWrites=true&w=majority`
+const dbURL =
+  'mongodb+srv://admin:admin@cluster0.mrxtjwf.mongodb.net/shopee?retryWrites=true&w=majority'
 const connected = chalk.bold.cyan
 const error = chalk.bold.yellow
 const disconnected = chalk.bold.red
