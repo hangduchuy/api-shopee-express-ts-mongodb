@@ -143,7 +143,6 @@ const getProducts = async (req: Request, res: Response) => {
         .lean(),
       ProductModel.find(condition).countDocuments().lean(),
     ])
-  console.log('123456')
   products = products.map((product) => handleImageProduct(product))
   const page_size = Math.ceil(totalProducts / limit) || 1
   const response = {
@@ -166,7 +165,6 @@ const getAllProducts = async (req: Request, res: Response) => {
   if (category) {
     condition = { category: category }
   }
-  console.log('qưewwwwwwwwwwww')
   let products: any = await ProductModel.find(condition)
     .populate({ path: 'category' })
     .sort({ createdAt: -1 })

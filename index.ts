@@ -21,14 +21,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const dirNameWithEnv = __dirname
-console.log('isProduction', isProduction)
-console.log('__dirname', __dirname)
-console.log('path.dirname(__dirname)', path.dirname(__dirname))
 
 const handlerImage: any = Object.values(FOLDERS).reduce(
   (result: any, current: any) => {
-    console.log('result', result)
-    console.log('current', current)
     return [
       ...result,
       express.static(path.join(dirNameWithEnv, `/${FOLDER_UPLOAD}/${current}`)),
