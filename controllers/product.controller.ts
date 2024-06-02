@@ -20,7 +20,6 @@ export const handleImageProduct = (product) => {
       return image !== '' ? HOST + `/${ROUTE_IMAGE}/` + image : ''
     })
   }
-  console.log('product', product)
   return product
 }
 

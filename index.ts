@@ -21,6 +21,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 const dirNameWithEnv = isProduction ? path.dirname(__dirname) : __dirname
+console.log('isProduction', isProduction)
+console.log('__dirname', __dirname)
+console.log('path.dirname(__dirname)', path.dirname(__dirname))
 
 const handlerImage: any = Object.values(FOLDERS).reduce(
   (result: any, current: any) => {
